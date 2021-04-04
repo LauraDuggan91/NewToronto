@@ -3,24 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>New Toronto Tree Care</title>
+    <link rel="shortcut icon" href="public/images/logo-leaf-only.png" type="image/x-icon">
     <link rel="stylesheet" href="public/styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300|Montserrat:200,400,600,800" rel="stylesheet">
 </head>
 
 <body>
 	<header id="home">
 		<div class="overlay">
- 			<!-- <div class="upper-nav">
+			<div class="lower-nav">
 				<ul>
 					<li>647.966.9601</li>
 					<li>info@newtorontotreecare.com</li>
 				</ul>
-				<ul class="instagram-icon">
-					<li>insta</li>
-				</ul>
-			</div> -->
-<div class="navbar">
+			</div>
+			<div class="navbar">
+
 				<ul class="main-nav">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#about">About</a></li>
@@ -33,13 +33,21 @@
 			</div>
 		</div>
 		<div class="middle">
-			<p><span class="new-toronto">New Toronto</span><br>Tree Care</p>
-			<a href="#contact" class="sub-header button1">request a quote</a><a href="#about" class="sub-header button2">Find out more<i class="fa fa-angle-right"></i></a>
+			<div class="flex">
+				<img class="logo-image" src="public/images/logo-leaf-only-large.png" />
+				<p><span class="new-toronto">New <span class="toronto">Toronto</span></span><br>Tree Care</p>
+			</div>
+			<div class="button-container">
+				<div><a href="#contact" class="sub-header button1">request a quote</a></div>
+				<div><a href="#about" class="sub-header button2">Find out more</a></div>
+			</div>
 		</div>
+		
 	</header>
 
 
 	<section id="about" class="container">
+		<h3>About Us</h3>
 		<div class="about-section-1">
 			<img class="about-image" src="public/images/insurance.jpg">
 			<div class="about-text">
@@ -66,26 +74,16 @@
 
 	<section id="services" class="container">
 		<h3>Services</h3>
-		<h3>Tree Removal</h3>
+		<h4>Tree Removal</h4>
 		<p>New Toronto Tree Care specializes in complicated tree removal. Our years of experience and top-of-the-line equipment ensures that we get the job done. Our arborists use a complicated system of roping and rigging to make sure that your tree comes down safely and efficiently.</p>
-		<h3>Pruning and Trimming</h3>
+		<h4>Pruning and Trimming</h4>
 		<p>Pruning and trimming your tree can not only improve the aesthetics of your entire property, but proper maintenance of your tree will improve its overall health for years to come. Our arborists specialize in preventative pruning to ensure that your tree is safe in the case of any unexpected weather or storms. </p>
-		<h3>Stump Grinding</h3>
+		<h4>Stump Grinding</h4>
 		<p>After your tree is removed, you could be left with an unsightly stump that comes above ground level. The only way to ensure that there will be no re-growth of the tree is to grind the stump down below ground level. This helps to kill the roots, and allows you to plant or cover the area in grass. </p>
-		<h3>Arborist Reports and Consultations</h3>
+		<h4>Arborist Reports and Consultations</h4>
 		<p>In order to remove a tree on your property larger than 30cm in diameter, you'll need to submit an Arborist Report to the city for approval. One of our ISA Certified Arborists will assess the tree and prepare an official document for Urban Forestry to review. Are you concerned about a possible disease or infestation on your property? Our arborists can meet with you for a scheduled consultation to assess and diagnose any problems with your tree, and they will also be able to recommend possible treatment plans. Ask us about our Emerald Ash Borer specialists.</p>
-		<h3>Fertilizing and Spraying</h3>
-		<p>We offer a wide range of fertilizers and sprays to help combat diseases and insect infestations. Fertilization should also be considered as a preventative measure. Our arborists will be able to advise which products to use, as well as the best time to treat your tree.</p>
 	</section>
 
-	<section class="container" id="about-owner">
-		<div>
-			<h3>About the Owner</h3>
-			<p>Starting with a small crew of arborists and a pick up truck, we helped local customers with their tree care needs. As the word spread, our work started to speak for itself. We now service the entire Greater Toronto Area with our multiple crews.</p>
-			<p>All of our employees are fully trained in proper chainsaw and chipper use, roping, rigging, and climbing techniques. You can rest assured that our equipment is well-maintained, and top-of-the-line. Trust us to take care of all your tree care needs. </p>
-		</div> 
-		
-	</section>
 
 	<section id="gallery" class="container">
 		<h3>Gallery</h3>
@@ -105,6 +103,15 @@
 		</div>
 	</section>
 
+	<section class="container" id="about-owner">
+		<div>
+			<h3>About the Owner</h3>
+			<p class="owner">Starting with a small crew of arborists and a pick up truck, we helped local customers with their tree care needs. As the word spread, our work started to speak for itself. We now service the entire Greater Toronto Area with our multiple crews.</p>
+			<p class="owner">All of our employees are fully trained in proper chainsaw and chipper use, roping, rigging, and climbing techniques. You can rest assured that our equipment is well-maintained, and top-of-the-line. Trust us to take care of all your tree care needs. </p>
+		</div> 
+		
+	</section>
+
 	<div class="container follow">
 		<p><a href="https://www.instagram.com/newtorontotreecare/" target="_blank"><i class="fa fa-instagram"></i>Follow us on Instagram!</a></p>
 	</div>
@@ -114,13 +121,15 @@
 		<div class="container">
 			<h3>Contact Us</h3>
 			<p>Get in touch with us today for a free, no obligation quote.</p>
-			<form method="POST" action="https://formspree.io/lauracatherineduggan@gmail.com">
+			<form method="POST" action="https://formspree.io/info@newtorontotreecare.com">
 				<div class="contact">
 					<div class="contact-left">
 						<p>Name *</p>
 						<input type="text" class="form_entry" name="name" placeholder="Your name">
 						<p>Email *</p>
 						<input class="form_entry" type="email" name="email" placeholder="Your email">
+						<p>Phone *</p>
+						<input class="form_entry" type="phone" name="number" placeholder="Your phone number">
 					</div>
 					<div class="contact-right">
 						<p>Message *</p>
@@ -134,9 +143,15 @@
 		</div>
 	</section>
 
+	<div class="insta-widget">
+		<h3>Instagram</h3>
+		<a  href="https://instawidget.net/v/user/newtorontotreecare" target="_blank" id="link-ca5f083d9050af5e3426e28a37f2f45e316aa920d7acb05400ee5806d9490345">@newtorontotreecare</a>
+		<script src="https://instawidget.net/js/instawidget.js?u=ca5f083d9050af5e3426e28a37f2f45e316aa920d7acb05400ee5806d9490345&width=300px"></script>
+	</div>
+
 	<section class="footer">
 		<div class="container">
-			<p class="footer-left">Copyright &copy;2018. New Toronto Tree Care. Built by <a href="http://www.lauraduggan.ca" target="_blank">Laura Duggan</a></p>
+			<p class="footer-left">Copyright &copy;2021. New Toronto Tree Care. Built by <a href="http://www.lauraduggan.ca" target="_blank">Laura Duggan</a></p>
 			<p class="footer-right"><a href="#home">To the top</a></p>
 		</div>
 	</section>

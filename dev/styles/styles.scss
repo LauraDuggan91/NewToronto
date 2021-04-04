@@ -6,16 +6,23 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 * { box-sizing: border-box; }
 
 $color-dark-green: #073b3a;
-$color-med-green: #0b6e4f;
-$color-main-green: #56E39F;
+$color-med-green: #26413c;
+$color-main-green: #439478;
 $color-warning: #DDB771;
-$color-accent: #6987C9;
+$color-accent: #26413c;
 
 body {
 	background-color: white;
 	font-family: 'Roboto', sans-serif;
 }
-h3, h4 {
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+    letter-spacing: 0.15em;
+    text-align: center;
+}
+h4 {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -44,28 +51,14 @@ header {
 		height: 100vh;
 		background-color: rgba(0,0,0,0.45);
 	}
-	.upper-nav {
-		background-color: $color-main-green;
-		color: white;
-		ul{
-			margin: 0;
-			list-style-type: none;
-			display: inline-block;
-			li {
-				display: inline-block;
-				padding: 10px 30px 10px 0px;
-			}
-		}
-		.instagram-icon{
-			float: right;
-		}
-	}
-	
+
+
 	.navbar {
 		width: 100%;
 		position: fixed;
 		list-style-type: none;
-		padding: 20px;
+		padding: 14px;
+		top: 44px;
 		float: right;
 		background-color: rgba(0,0,0,0.7);
 		color: white;
@@ -78,11 +71,31 @@ header {
 			display: inline;
 			padding-left: 25px;
 			text-transform: uppercase;
-			font-family: 'Montserrat', sans-serif;
+			font-family: 'Myriad Pro', sans-serif;
 			font-size: 14px;
 			a {
 				text-decoration: none;
 				color: white;
+			}
+		}
+	}
+	.lower-nav {
+		background-color: #439478;
+    	color: white;
+    	position: fixed;
+	    left: 0;
+	    width: 100%;
+	    text-align: center;
+	    z-index: 100;
+		ul{
+			margin: 0;
+			list-style-type: none;
+			display: inline-block;
+			li {
+				display: inline-block;
+				padding: 10px 30px 10px 0px;
+				font-size: 20px;
+				text-transform: inherit;
 			}
 		}
 	}
@@ -116,22 +129,31 @@ header {
 .middle {
 	position: absolute;
 	font-family: "Montserrat", sans-serif;
-	transform: translate(-20%,-50%);
+	transform: translate(40%,-50%);
 	top: 50%;	
-	left: 50%;
-	font-size: 40px;
+	font-size: 50px;
 	text-transform: uppercase;
 	color: white;
 	p {
 		margin:0;
 	}
+	.flex {
+		display: flex;
+		justify-content: center;
+	}
+	.logo-image {
+		height: 150px;
+	}
 	.new-toronto {
-		font-size: 60px;
+		font-size: 68px;
 		text-align: center;
-		font-weight: 600;
+		font-weight: 200;
 		margin: auto;
 		text-align: left;
 		letter-spacing: 0.1em;
+	}
+	.toronto {
+		font-weight: 600;
 	}
 	.button1 {
 		font-size: 14px;
@@ -139,10 +161,15 @@ header {
 	    font-family: 'Montserrat', sans-serif;
 	 	text-decoration: none;
 	    padding: 15px 30px;
-	    // border-radius: 30px;
 	    background-color: $color-main-green;
 	    border: 2px solid $color-main-green;
 	    color: white;
+	}
+	.button-container {
+	    margin-top: 20px;
+	    text-align: center;
+	    display: flex;
+	    justify-content: center;
 	}
 	.button2 {
 		font-size: 14px;
@@ -150,7 +177,6 @@ header {
 	    font-family: 'Montserrat', sans-serif;
 	 	text-decoration: none;
 	    padding: 15px 30px;
-	    // border-radius: 30px;
 	    background-color: transparent;
 	    color: $color-main-green;
 	    border: 2px solid $color-main-green;
@@ -199,21 +225,33 @@ header {
 	
 }
 
+//services 
+
+#services {
+	margin-bottom: 100px;
+}
+
 //gallery 
 
 .gallery {
-	margin-bottom: 100px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	// align-content: flex-end;
+	margin-bottom: 100px;
 	img {
-	    width: calc(33.3% - 10px);
+	    width: calc(33% - 10px);
+	    min-width: 300px;
     	margin-top: 20px;
-    	height: 200px;
+    	height: 300px;
     	object-fit: cover;
 	}
+}
+
+//about owner
+
+#about-owner {
+	margin-bottom: 100px;
 }
 
 
@@ -232,11 +270,13 @@ header {
 	p {
 		position: absolute;
 		color: white;
-		top: -35px;
+		top: -30px;
 		right: 0;
 		background-color: $color-main-green;
 		padding: 10px;
 		border-radius: 30px;
+	    box-shadow: 2px 2px 5px #555;
+
 		a {
 			text-decoration: none;
 			color: white;
@@ -269,11 +309,12 @@ header {
 			border-bottom: 1px solid $color-main-green;
 			border-left: 1px solid $color-main-green;
 			margin-bottom: 40px;
+			padding-left: 20px;
 		}
 		input::placeholder {
 			color: gray;
 			font-size: 14px;
-			padding-left: 20px;
+
 		}
 	}
 	.contact-right {
@@ -287,11 +328,12 @@ header {
 			border-left: 1px solid $color-main-green;
 			margin-bottom: 40px;
 			padding-top: 10px;
+			padding-left: 20px;
 		}
 		textarea::placeholder {
 			color: gray;
 			font-size: 14px;
-			padding-left: 20px;
+			
 		}
 	}
 	p {
@@ -319,52 +361,14 @@ header {
 .submitButton:hover {
 	background-color: #74E8B0;
 }
+.owner {
+	text-align: center;
+}
 
-//old contact css
-// .contact {
-// 	display: flex;
-// 	flex-direction: row;
-// 	margin-bottom: 20px;
-// 	justify-content: space-between;
-// 	.contact-left {
-// 		margin-right: 40px;
-// 		width: calc(50% - 10px);
-// 		input {
-// 			width: 100%;
-// 			border: 1px solid #ccc;
-// 		}
-// 		input::placeholder {
-// 			color: grey;
-// 			font-size: 14px;
-// 		}
-// 	}
-// 	.contact-right {
-// 		width: calc(50% - 10px);
-// 		textarea {
-// 			width: 100%;
-// 			border: 1px solid #ccc;
-// 			height: auto;
-// 			padding-top: 10px;
-// 		}
-// 		textarea::placeholder {
-// 			color: grey;
-// 			font-size: 14px;
-// 		}
-// 	}
-// 	p {
-// 		text-transform: uppercase;
-// 		font-size: 11.5px;
-// 		color: black;
-// 		font-weight: 600;
-// 	}
-// 	.form_entry {
-// 		height: 40px;
-// 	    padding-left: 20px;
-// 	    line-height: 22px;
-// 	    letter-spacing: .5px;
-// 	}
-// }
-
+.insta-widget {
+	margin: 80px;
+	text-align: center;
+}
 
 //footer
 
@@ -373,7 +377,6 @@ header {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-family: 'Montserrat', sans-serif;
-	// margin-top: 50px;
 	font-size: 12px;
 	color: $color-main-green;
 	background-color: black;
@@ -395,6 +398,96 @@ header {
 	}
 }
 
+//Responsive
+
+@media (max-width: 1050px) {
+	.middle p span, .middle .new-toronto, .middle {
+		font-size: 40px;
+	}
+	.middle .flex {
+		flex-wrap: wrap;
+		flex-direction: column;
+		text-align: center;
+	}
+	.middle .logo-image {
+		width: 50%;
+    	margin: 0 auto;
+    	height: unset;
+	}
+	.middle {
+	    transform: translate(-50%, -50%);
+	    top: 50%;
+	    left: 50%;
+	}
+}
+
+@media (max-width: 760px) {
+	#about .about-section-1 img, #about .about-section-2 img {
+		width: 100%;
+	}
+	#about .about-section-1, #about .about-section-2  {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	#about .about-section-1 .about-text, #about .about-section-2 .about-text {
+		padding: 0;
+	}
+	.gallery {
+		justify-content: center;
+	}
+	.middle .button-container {
+		flex-wrap: wrap;
+	}
+
+	.middle .button-container div {
+		margin-top: 20px;
+		display: block;
+		text-align: center;
+	}
+	.middle .button2 {
+		margin-left: 0;
+	}
+	header .contact-button {
+		display: none;
+	}
+	header .navbar {
+		text-align: center;
+	}
+	header .main-nav {
+		width: 100%;
+	}
+
+
+}
+
+@media (max-width: 830px) {
+	.middle .button-container {
+		flex-wrap: wrap;
+	}
+
+	.middle .button-container div {
+		margin-top: 20px;
+		display: block;
+		text-align: center;
+	}
+	.middle .button2 {
+		margin-left: 0;
+	}
+}
+
+
+@media (max-width: 540px) {
+	.middle .button2 {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+	header .lower-nav ul li {
+		font-size: 10px;
+	}
+	header .navbar {
+		top: 31px;
+	}
+}
 
 
 
